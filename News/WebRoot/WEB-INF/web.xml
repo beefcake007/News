@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+	http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	
+	<display-name>News</display-name>
+	<welcome-file-list>
+		<welcome-file>a.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>initServlet</servlet-name>
+		<servlet-class>com.fanye.web.InitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>initServlet</servlet-name>
+		<url-pattern>/init</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>indexServlet</servlet-name>
+		<servlet-class>com.fanye.web.IndexServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>indexServlet</servlet-name>
+		<url-pattern>/goIndex</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>newsServlet</servlet-name>
+		<servlet-class>com.fanye.web.NewsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>newsServlet</servlet-name>
+		<url-pattern>/news</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>commentServlet</servlet-name>
+		<servlet-class>com.fanye.web.CommentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>commentServlet</servlet-name>
+		<url-pattern>/comment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userServlet</servlet-name>
+		<servlet-class>com.fanye.web.UserServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>userServlet</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>linkServlet</servlet-name>
+		<servlet-class>com.fanye.web.LinkServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>linkServlet</servlet-name>
+		<url-pattern>/link</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>newsTypeServlet</servlet-name>
+		<servlet-class>com.fanye.web.NewsTypeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>newsTypeServlet</servlet-name>
+		<url-pattern>/newsType</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>imageUploadServlet</servlet-name>
+		<servlet-class>com.fanye.web.ImageUploadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>imageUploadServlet</servlet-name>
+		<url-pattern>/imageUpload</url-pattern>
+	</servlet-mapping>
+</web-app>
